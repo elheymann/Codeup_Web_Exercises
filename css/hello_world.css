@@ -1,0 +1,55 @@
+
+#container {
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+}
+<link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+
+/* color of the headers on the page */
+h1, h2 {
+    color: darkblue;
+    text-decoration: underline;
+    text-align: center;
+}
+/* background color and image */
+body {
+    color: black;
+    font-family: 'Yatra One', cursive;
+    background-image: url("../img/weather.png");
+}
+ol {
+    list-style: upper-roman;
+}
+
+ul {
+    list-style: square;
+}
+body tr:nth-child(odd) {
+    background-color: #b82ee5;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #46afe3;
+}
+
+table {
+    background-color: #b82ee5;
+}
+a:link {
+    color: #265301;
+}
+
+a:visited {
+    color: #437A16;
+}
+
+a:hover {
+    border-bottom: 1px solid;
+    background: #CDFEAA;
+}
+
+a:active {
+    background: #265301;
+    color: #CDFEAA;
+} color: #CDFEAA;

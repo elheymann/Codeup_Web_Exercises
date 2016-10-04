@@ -1,0 +1,43 @@
+h1 {
+    color: purple;
+    font-style: bold;
+    text-decoration: underline;
+}
+.colors {
+    width: 150px;
+    height: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+#red {
+    background-color: red;;
+}
+
+#orange {
+    background-color: orange;
+    margin-left: 30px;
+}
+
+#yellow {
+    background-color: yellow;
+    margin-left: 60px;
+    text-shadow: 1px 1px #000000;
+}
+
+#green {
+    background-color: green;
+    margin-left: 90px;
+}
+
+#blue {
+    background-color: blue;
+    margin-left: 120px;
+}
+
+#violet {
+    background-color: violet;
+    margin-left: 150px;
+}

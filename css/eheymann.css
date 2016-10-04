@@ -1,0 +1,81 @@
+.navbar-static-top{
+    word-spacing: 10rem;
+    font-size: 2rem;
+    background-color: dimgray;
+}
+
+.jumbotron {
+    margin-top: 12%;
+    background-color: transparent;
+    color: #e6e6e6;
+    text-shadow: 2px 2px black;
+    font-family: 'Fjalla One', sans-serif;
+
+}
+h4{
+    margin: 2px;
+}
+
+.wrapper {
+    background-color: white;
+    width: 100%;
+    margin-top: 50%;
+}
+
+#content {
+    color: black;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+.row {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0;
+    margin: 2%;
+    display: block;
+}
+
+body {
+    background: url("../img/guam.jpeg") no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+
+}
+
+.contact_me{
+    text-align: center;
+    padding: 2%;
+}
+
+.bio{
+    float: left;
+    margin-left: 1%;
+    text-shadow: 1px 1px black;
+
+}
+#moving_nav{
+    height: 50px;
+    padding-bottom: -100px;
+}
+.work{
+    float: right;
+    margin-right: 1%;
+    text-shadow: 1px 1px black;
+}
+
+@media only screen and (min-device-width : 751px) and (max-device-width : 970px) {
+    h1{
+        font-size: smaller;
+    }
+}
+
+#eunicepic {
+    width: 20%;
+}
+
+#soldier1, #soldier2{
+    width: 40%;
+
+}
