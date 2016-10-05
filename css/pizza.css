@@ -1,0 +1,28 @@
+.hero {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 4rem;
+
+
+}
+
+h1{
+    font-family: 'Cutive', serif;
+    font-size: 10rem;
+    text-shadow: 2px 2px white;
+}
+.container {
+    margin-top: 25%;
+    background-color: #adadad;
+}
+
+.pizza {
+    border: 10px solid transparent;
+    margin-bottom: 10%;
+    width: 90%;
+    height: 80%;
+    opacity: 0.7;
+}
+.pizza:hover {
+    border-color: #f1f1f1;
+}
