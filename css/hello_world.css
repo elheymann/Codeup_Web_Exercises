@@ -4,7 +4,7 @@
     width: 500px;
     padding: 10px;
 }
-<link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+
 
 /* color of the headers on the page */
 h1, h2 {
@@ -52,4 +52,4 @@ a:hover {
 a:active {
     background: #265301;
     color: #CDFEAA;
-} color: #CDFEAA;
+}
