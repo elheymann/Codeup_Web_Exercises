@@ -14,17 +14,17 @@ var amountBeforeDiscountCameron = 180;
 var amountBeforeDiscountGeorge = 320;
 var discount = .8;
 
-if (amountBeforeDiscountCameron >= 200){
+if (amountBeforeDiscountCameron > 200){
     console.log("Cameron " + "$" + amountBeforeDiscountCameron + " $" + (amountBeforeDiscountCameron * discount));
 } else
     console.log("Cameron" + " " + "$" + amountBeforeDiscountCameron + " $" + amountBeforeDiscountCameron);
 
-if (amountBeforeDiscountRyan >= 200){
+if (amountBeforeDiscountRyan > 200){
     console.log("Ryan " + "$" + amountBeforeDiscountRyan + " $" + (amountBeforeDiscountRyan * discount));
 } else
     console.log("Ryan " + "$" + amountBeforeDiscountRyan + " $" + amountBeforeDiscountRyan);
 
-if (amountBeforeDiscountGeorge >= 200){
+if (amountBeforeDiscountGeorge > 200){
     console.log("George " + "$" + amountBeforeDiscountGeorge + " $" + (amountBeforeDiscountGeorge * discount));
 } else
     console.log("George " + "$" + amountBeforeDiscountGeorge + " $" + amountBeforeDiscountGeorge);
