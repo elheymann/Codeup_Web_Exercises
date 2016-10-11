@@ -1,5 +1,6 @@
-"use strict";
+
 (function () {      //IIFE
+    "use strict";
     var myNameIs = 'Eunice'; // TODO: Fill in your name here.
 
     function sayHello(name) {
