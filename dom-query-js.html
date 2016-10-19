@@ -58,3 +58,12 @@
 </script>
 </body>
 </html>
+<!-- list Items solution:
+  for (var i = 0, i < listItems.length, i++) {
+    if(i % 2 != 0){
+        listItems[i].style.color = "gray";
+    }
+    if(listItems[i].getAttribute("data-bid") == 1) {
+        listItems[i].style.color = "blue";
+    }
+  }
