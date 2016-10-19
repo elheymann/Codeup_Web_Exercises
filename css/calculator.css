@@ -1,4 +1,31 @@
-#operator
+#operator{
+    width: 4rem;
+    height: 4rem;
+}
+
+#leftOperand, #rightOperand{
+    width: 8rem;
+    height: 4rem;
+    margin-bottom: 1em;
+}
+
+button{
+    height: 5rem;
+    width: 5rem;
+    font-size: 2em;
+}
+
+h3{
+
+}
 
 
+
+.digits{
+    background-color: #5b9aa0;
+}
+
+.operators {
+    background-color: #622569;
+}
 
