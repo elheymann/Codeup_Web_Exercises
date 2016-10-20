@@ -5,7 +5,7 @@ int half = (number + 2 - 1)/2;
 int square = 0;
 boolean isSquare = false;
 
-for( int i = half; i > 0 ; i-- ){
+for( int i = half; i > 0 ; i--){
 
     square = i*i;
 

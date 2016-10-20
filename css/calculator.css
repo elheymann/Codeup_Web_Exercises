@@ -1,24 +1,36 @@
 #operator{
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 5rem;
+    border-style: outset;
+    color: #622569;
+    font-size: 1.75em;
 }
 
 #leftOperand, #rightOperand{
-    width: 8rem;
-    height: 4rem;
+    width: 12rem;
+    height: 5rem;
     margin-bottom: 1em;
+    border-style: outset;
+    color: #622569;
+    font-size: 1.75em;
+
 }
 
 button{
-    height: 5rem;
-    width: 5rem;
-    font-size: 2em;
+    height: 6rem;
+    width: 6rem;
+    font-size: 1.75em;
+    font-family: 'Chicle', cursive;
 }
 
-h3{
-
+h1{
+    font-family:'Butterfly Kids', cursive;
+    font-size: 8rem;
 }
 
+body{
+    background-image: url(../img/vectorbutterfly.jpeg);
+}
 
 
 .digits{
@@ -26,6 +38,9 @@ h3{
 }
 
 .operators {
-    background-color: #622569;
+    background-color: #b8a9c9;
 }
 
+#btnC {
+    background-color: #c83349;
+}

@@ -8,7 +8,7 @@ var rightInput = document.getElementById("rightOperand");
 var operatorInput = document.getElementById("operator");
 var inputs = document.getElementsByClassName("inputs");
 var clear = document.getElementById("btnC");
-
+var decimal = document.getElementById("btn.");
 
 for (var i = 0; i < digits.length; i++)
         digits[i].addEventListener('click', function () {
@@ -16,11 +16,15 @@ for (var i = 0; i < digits.length; i++)
             if (operatorInput.value) {
 
                 rightInput.value += this.innerHTML;
-
+                if (digits === "."){
+                    decimal.disabled = true;
+                }
             } else {
 
                 leftInput.value += this.innerHTML;
-
+                if (digits === "."){
+                    decimal.disabled = true;
+                }
             }
         });
 for (i = 0 ; i < operators.length; i++) {
@@ -30,7 +34,7 @@ for (i = 0 ; i < operators.length; i++) {
         event.preventDefault();
 
         operatorInput.value = this.innerHTML;
-
+        decimal.disabled = true;
     })
 }
 

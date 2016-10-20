@@ -4,49 +4,25 @@
     <meta charset="UTF-8">
     <title>JavaScript Calculator</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
     <link rel="stylesheet" href="css/calculator.css">
 </head>
 <body>
 <div class="text-center">
-    <h3>Cookie Calculator</h3>
+    <h1>Cookie Calculator</h1>
 </div>
 <div class="container-fluid text-center" id="calculator">
     <div class="row">
         <label for="leftOperand"></label>
-        <input id="leftOperand" class="inputs" type="text">
+        <input id="leftOperand" class="inputs" type="text" maxlength="10" readonly>
 
         <label for="operator"></label>
-        <input id="operator" class="inputs" type="text">
+        <input id="operator" class="inputs" type="text" maxlength="1" readonly>
 
 
         <label for="rightOperand"></label>
-        <input id="rightOperand" class="inputs" type="text">
-    </div>
-
-    <div class="row">
-
-            <button id="btn1" class="digits">1</button>
-
-
-            <button id="btn2" class="digits">2</button>
-
-
-            <button id="btn3" class="digits">3</button>
-
-
-            <button id="btn+" class="operators">+</button>
-
-    </div>
-    <div class="row">
-
-            <button id="btn4" class="digits">4</button>
-
-            <button id="btn5" class="digits">5</button>
-
-            <button id="btn6" class="digits">6</button>
-
-            <button id="btn-" class="operators">-</button>
-
+        <input id="rightOperand" class="inputs" type="text" maxlength="10" readonly>
     </div>
     <div class="row">
         <button id="btn7" class="digits">7</button>
@@ -58,24 +34,59 @@
         <button id="btn9" class="digits">9</button>
 
 
-        <button id="btn*" class="operators">*</button>
+        <button id="btn/" class="operators">/</button>
+    </div>
+
+
+    <div class="row">
+
+        <button id="btn4" class="digits">4</button>
+
+        <button id="btn5" class="digits">5</button>
+
+        <button id="btn6" class="digits">6</button>
+
+        <button id="btn-" class="operators">-</button>
+
+    </div>
+    <div class="row">
+
+        <button id="btn1" class="digits">1</button>
+
+
+        <button id="btn2" class="digits">2</button>
+
+
+        <button id="btn3" class="digits">3</button>
+
+
+        <button id="btn+" class="operators">+</button>
 
     </div>
     <div class="row">
         <button id="btnC">C</button>
 
-        <button id="btn0" class="digits" >0</button>
+        <button id="btn0" class="digits">0</button>
+
+        <button id="btn." class="digits">.</button>
+
+        <button id="btn*" class="operators">*</button>
 
 
+    </div>
+
+    <div class="row">
+        <button id="btn$" class="money">$</button>
+        <button id="btn00" class="digits">.00</button>
         <button id="btn=" class="total">=</button>
+        <button id="btn%">%</button>
 
-
-        <button id="btn/" class="operators">/</button>
     </div>
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/calculator.js"></script>
 </body>
