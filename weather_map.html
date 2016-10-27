@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map API</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/superhero.css">
+</head>
+<body>
+<h1 class="header jumbotron text-center">Weather Map</h1>
+<h3 id="input"></h3>
+<div class = "col-lg-3">
+    <div class="row dayOne">
+
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.js"
+
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+
+        crossorigin="anonymous"></script>
+<script>
+
+
+   (function () {
+       "use strict";
+       var request = $.get("http://api.openweathermap.org/data/2.5/weather", {
+           APPID: "24c632dba26d81f754038d888d64a6fa",
+           q: "Austin, TX",
+           units: "imperial"
+       }).done(function(data) {
+           console.log(data);
+           var input = $("#input");
+           input.append(data.weather[0].main);
+       });
+       request.fail(function (error) {
+
+           console.log("BEEP! ERROR! ERROR!")
+
+       });
+
+   })();
+</script>
+<script src="js/bootstrap.js"></script>
+</body>
+
+</html>

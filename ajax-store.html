@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Categories</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button id="Refresh">Refresh</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+(function() {
+    "use strict";
+    // TODO: Create an ajax GET request for /data/inventory.json
+
+
+
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    $.ajax({
+        url: "data/inventory.json",
+        //force to handle it as text
+        dataType: "text",
+        success: function(data) {
+
+            //data downloaded so we call parseJSON function
+            //and pass downloaded data
+            var json = $.parseJSON(data);
+            console.log(json);
+            //now json variable contains data in json format
+            //let's display a few items
+
+            // we'll put all our html in here for now
+            var html = "";
+            for (var i=0;i<json.length;++i)
+            {
+                /*// if on first loop, create the col headers
+                if(i===0){
+                    html += '<thead><tr>';
+                    $.each(json[i], function(key, value){
+                        html += '<td>'+ key +'</td>' ;
+                    });
+                        html += '</thead></tr>';
+                }*/
+
+                // loop through all the json objects and for every key add a column with the value
+                html += '<tr>';
+                $.each(json[i], function(key, value){
+                    html += '<td>'+value+'</td>' ;
+                });
+                html += '</tr>';
+            }
+            // push all the html in one go to the page
+            $('#insertProducts').append(html);
+        }
+    });
+    //http://stackoverflow.com/questions/36063401/fill-html-table-based-on-json
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+})();
+</script>
+
+</body>
+</html>
+
+/*// TODO: Create an ajax GET request for /data/inventory.json
+create an ajax get request to "data/inventory.json"
+write a .done() method
+write a .fail() method
+
+var ajaxObject = $.get("data/inventory.json");
+
+ajaxObject.done(function() {
+    response.forEach(function(tool){
+    console.log(tool);
+
+});
+
+ajaxObject.fail(function (error) {
+    console.log(error)
+
+});
+
