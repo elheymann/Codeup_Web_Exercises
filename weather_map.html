@@ -5,41 +5,113 @@
     <title>Weather Map API</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/superhero.css">
+    <style type="text/css">
+        #map-canvas {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
 </head>
 <body>
 <h1 class="header jumbotron text-center">Weather Map</h1>
-<h3 id="input"></h3>
-<div class = "col-lg-3">
-    <div class="row dayOne">
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 text-center table-bordered">
+            <h3>Today</h3>
+            <div id="input1"></div>
+        </div>
+        <div class="col-sm-4 text-center table-bordered">
+            <h3>Manana</h3>
+            <div id="input2"></div>
+        </div>
+        <div class="col-sm-4 text-center table-bordered">
+            <h3>Future</h3>
+            <div id="input3"></div>
+        </div>
+    </div>
+    <div class="search text-center">
+        <form>
+            <label><input type="text" class="latitude" placeholder="Enter latitude"></label>
+            <label><input type="text" class="longitude" placeholder="Enter longitude"></label>
+            <button type="submit" id="search">Search</button>
+        </form>
+    </div>
+    <div>
+        <!-- div to hold map -->
+        <div id="map-canvas"></div>
     </div>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.1.1.js"
 
         integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
 
         crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj_Iyz481r6JWrCDrf2NWVnycHowJKCG4"></script>
+
 <script>
+    /*var longitude = ("#longitude");
+    var latitude = ("#latitude");*/
+
+    (function () {
+        "use strict";
+        var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+            APPID: "24c632dba26d81f754038d888d64a6fa",
+            /*lat: latitude,
+            lon: longitude,*/
+            q: "Guam",
+            cnt: 3,
+            unit: "imperial"
+
+        }).done(function (data) {
+            console.log(data);
+            var input1 = $("#input1");
+            input1.append("<p><h3>" + (data.list[0].temp.min).toFixed(0) + "/" + (data.list[0].temp.max).toFixed(0) + "%</h3></p>" + "<p>" + "<img src = http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png>" + "</p>" + "<p>Clouds: " + data.list[0].weather[0].description + "</p><p>" + " Humidity: " + data.list[0].humidity + "% </p>" + "<p> Wind: " + data.list[0].speed + "</p>" + "Pressure: " + data.list[0].pressure + "</p>");
+            var input2 = $("#input2");
+            input2.append("<p><h3>" + (data.list[1].temp.min).toFixed(0) + "/" + (data.list[1].temp.max).toFixed(0) + "%</h3></p>" + "<p>" + "<img src = http://openweathermap.org/img/w/" + data.list[1].weather[0].icon + ".png>" + "</p>" + "<p>Clouds: " + data.list[1].weather[0].description + "</p><p>" + " Humidity: " + data.list[1].humidity + "% </p>" + "<p> Wind: " + data.list[1].speed + "</p>" + "Pressure: " + data.list[1].pressure + "</p>");
+            var input3 = $("#input3");
+            input3.append("<p><h3>" + (data.list[2].temp.min).toFixed(0) + "/" + (data.list[2].temp.max).toFixed(0) + "%</h3></p>" + "<p>" + "<img src = http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png>" + "</p>" + "<p>Clouds: " + data.list[2].weather[0].description + "</p><p>" + " Humidity: " + data.list[2].humidity + "% </p>" + "<p> Wind: " + data.list[2].speed + "</p>" + "Pressure: " + data.list[2].pressure + "</p>");
+        });
+        request.fail(function (error) {
+
+            console.log("BEEP! ERROR! ERROR!")
+
+        });
+
+    })();
 
 
-   (function () {
-       "use strict";
-       var request = $.get("http://api.openweathermap.org/data/2.5/weather", {
-           APPID: "24c632dba26d81f754038d888d64a6fa",
-           q: "Austin, TX",
-           units: "imperial"
-       }).done(function(data) {
-           console.log(data);
-           var input = $("#input");
-           input.append(data.weather[0].main);
-       });
-       request.fail(function (error) {
 
-           console.log("BEEP! ERROR! ERROR!")
 
-       });
+    (function () {
+        "use strict";
 
-   })();
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 5,
+            // This sets the center of the map at our location
+            center: {
+                lat: 13.349707,
+                lng: 144.768255
+            }
+        };
+
+
+
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+
+        var grandparents = {lat: 13.349707, lng: 144.768255};
+
+        var marker = new google.maps.Marker({
+            position: grandparents,
+            map: map,
+            draggable: true
+        });
+
+
+    })();
 </script>
 <script src="js/bootstrap.js"></script>
 </body>
