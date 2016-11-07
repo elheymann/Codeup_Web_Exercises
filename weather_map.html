@@ -50,18 +50,17 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj_Iyz481r6JWrCDrf2NWVnycHowJKCG4"></script>
 
 <script>
-    /*var longitude = ("#longitude");
-    var latitude = ("#latitude");*/
+    /*var longitude = $("#longitude").val();
+    var latitude = $("#latitude").val();*/
 
+//jquery selector for search onClick and preventdefault
     (function () {
         "use strict";
         var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "24c632dba26d81f754038d888d64a6fa",
-            /*lat: latitude,
-            lon: longitude,*/
-            q: "Guam",
+         q: "Guam",
             cnt: 3,
-            unit: "imperial"
+            units: "imperial"
 
         }).done(function (data) {
             console.log(data);
