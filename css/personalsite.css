@@ -1,6 +1,31 @@
-
 img{
     width: 30%;
-    margin: 0;
-    padding: 0;
+}
+
+body{
+font-family: ff-market-web, cursive;
+font-style: normal;
+font-weight: 400;
+}
+#email{
+    margin: 1em;
+    width: 20em;
+}
+#comment{
+    margin: 1em;
+    width: 20em;
+    height: 10em;
+}
+.panel-footer{
+    margin-top: 2em;
+}
+.flexcontainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
 }
