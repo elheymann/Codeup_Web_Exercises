@@ -29,3 +29,9 @@ font-weight: 400;
     -webkit-justify-content: center;
     justify-content: center;
 }
+
+#blogs{
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
