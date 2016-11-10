@@ -1,8 +1,10 @@
-img{
+.projects{
     width: 30%;
 }
 
-
+.pic{
+    width: 30%;
+}
 #email{
     margin: 1em;
     width: 20em;
